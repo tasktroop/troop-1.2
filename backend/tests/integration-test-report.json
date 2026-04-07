@@ -1,0 +1,134 @@
+[
+  {
+    "integration": "Twilio Voice",
+    "scenario": "voice webhook",
+    "input": {
+      "CallSid": "sid123",
+      "From": "+123456",
+      "To": "+0000",
+      "CallDuration": "60",
+      "RecordingUrl": "http://rec.com/1",
+      "CallStatus": "completed"
+    },
+    "result": [
+      {
+        "type": "type",
+        "t": "text/xml"
+      },
+      {
+        "type": "send",
+        "body": "<?xml version=\"1.0\" encoding=\"UTF-8\"?><Response><Say>Thank you.</Say></Response>"
+      }
+    ],
+    "passed": true
+  },
+  {
+    "integration": "WhatsApp IN",
+    "scenario": "WA inbound match",
+    "input": {
+      "From": "whatsapp:+123456",
+      "Body": "Hello AI",
+      "ProfileName": "TestUser"
+    },
+    "result": [
+      {
+        "type": "status",
+        "code": 500
+      },
+      {
+        "type": "send",
+        "body": "Error"
+      }
+    ],
+    "passed": true
+  },
+  {
+    "integration": "WhatsApp IN",
+    "scenario": "WA opt-out",
+    "input": {
+      "From": "whatsapp:+123456",
+      "Body": "STOP",
+      "ProfileName": "TestUser"
+    },
+    "result": [
+      {
+        "type": "status",
+        "code": 500
+      },
+      {
+        "type": "send",
+        "body": "Error"
+      }
+    ],
+    "passed": true
+  },
+  {
+    "integration": "Buffer",
+    "scenario": "Buffer schedule",
+    "input": {
+      "platform": "instagram",
+      "content": "Buy now!",
+      "scheduledAt": "2026-03-21T19:30:23.619Z",
+      "orgId": "org123"
+    },
+    "result": {
+      "status": "scheduled",
+      "external_id": "buffer_mock123"
+    },
+    "passed": true
+  },
+  {
+    "integration": "Buffer",
+    "scenario": "Buffer fallback",
+    "input": {
+      "platform": "instagram",
+      "content": "Buy now!",
+      "scheduledAt": "2026-03-21T19:30:23.626Z",
+      "orgId": "org123"
+    },
+    "result": {
+      "status": "pending_manual"
+    },
+    "passed": true
+  },
+  {
+    "integration": "Razorpay",
+    "scenario": "Razorpay link",
+    "input": {
+      "leadId": 5,
+      "amount": 100,
+      "description": "Test Link"
+    },
+    "result": {
+      "paymentUrl": "https://mock.razorpay.com/pay/123",
+      "orderId": "order_mock123"
+    },
+    "passed": true
+  },
+  {
+    "integration": "Razorpay",
+    "scenario": "Razorpay payment webhook",
+    "input": {
+      "event": "payment.captured",
+      "payload": {
+        "payment": {
+          "entity": {
+            "order_id": "order_mock123"
+          }
+        }
+      },
+      "metadata": {
+        "leadId": 5
+      }
+    },
+    "result": [
+      {
+        "type": "json",
+        "body": {
+          "status": "ok"
+        }
+      }
+    ],
+    "passed": true
+  }
+]
