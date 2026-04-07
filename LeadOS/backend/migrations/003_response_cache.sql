@@ -1,0 +1,5 @@
+CREATE TABLE IF NOT EXISTS response_cache (
+  key VARCHAR PRIMARY KEY,
+  value TEXT NOT NULL,
+  expires_at TIMESTAMP WITH TIME ZONE
+);

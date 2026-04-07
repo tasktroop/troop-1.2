@@ -1,0 +1,349 @@
+{
+  "info": {
+    "name": "LeadOS Phase 1 API",
+    "description": "Postman Collection covering every API route for Phase 1 of LeadOS.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "System",
+      "item": [
+        {
+          "name": "Health Check",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/health",
+              "host": ["{{base_url}}"],
+              "path": ["health"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Auth",
+      "item": [
+        {
+          "name": "Sign Up",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"admin@leados.com\",\n  \"password\": \"securepassword123\",\n  \"full_name\": \"Admin User\",\n  \"org_name\": \"My Org\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/auth/signup",
+              "host": ["{{base_url}}"],
+              "path": ["auth", "signup"]
+            }
+          }
+        },
+        {
+          "name": "Log In",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"admin@leados.com\",\n  \"password\": \"securepassword123\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/auth/login",
+              "host": ["{{base_url}}"],
+              "path": ["auth", "login"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Leads",
+      "item": [
+        {
+          "name": "Get Leads",
+          "request": {
+            "method": "GET",
+            "header": [
+              { "key": "Authorization", "value": "Bearer {{auth_token}}" }
+            ],
+            "url": {
+              "raw": "{{base_url}}/leads",
+              "host": ["{{base_url}}"],
+              "path": ["leads"]
+            }
+          }
+        },
+        {
+          "name": "Create Lead",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "Authorization", "value": "Bearer {{auth_token}}" },
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"John Doe\",\n  \"email\": \"john@example.com\",\n  \"phone\": \"+1234567890\",\n  \"status\": \"new\",\n  \"stage\": \"new\",\n  \"source\": \"website\",\n  \"whatsapp_opted_out\": false\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/leads",
+              "host": ["{{base_url}}"],
+              "path": ["leads"]
+            }
+          }
+        },
+        {
+          "name": "Update Lead",
+          "request": {
+            "method": "PUT",
+            "header": [
+              { "key": "Authorization", "value": "Bearer {{auth_token}}" },
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"stage\": \"contacted\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/leads/{{lead_id}}",
+              "host": ["{{base_url}}"],
+              "path": ["leads", "{{lead_id}}"]
+            }
+          }
+        },
+        {
+          "name": "Delete Lead",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              { "key": "Authorization", "value": "Bearer {{auth_token}}" }
+            ],
+            "url": {
+              "raw": "{{base_url}}/leads/{{lead_id}}",
+              "host": ["{{base_url}}"],
+              "path": ["leads", "{{lead_id}}"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Notes",
+      "item": [
+        {
+          "name": "Get Notes",
+          "request": {
+            "method": "GET",
+            "header": [
+              { "key": "Authorization", "value": "Bearer {{auth_token}}" }
+            ],
+            "url": {
+              "raw": "{{base_url}}/leads/{{lead_id}}/notes",
+              "host": ["{{base_url}}"],
+              "path": ["leads", "{{lead_id}}", "notes"]
+            }
+          }
+        },
+        {
+          "name": "Add Note",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "Authorization", "value": "Bearer {{auth_token}}" },
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"content\": \"Spoke with John, he is interested in the pro plan.\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/leads/{{lead_id}}/notes",
+              "host": ["{{base_url}}"],
+              "path": ["leads", "{{lead_id}}", "notes"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Approvals",
+      "item": [
+        {
+          "name": "Create Approval",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "Authorization", "value": "Bearer {{auth_token}}" },
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"entity_type\": \"post\",\n  \"entity_id\": \"b83c78cd-11b0-4560-a7d9-36a5db229d47\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/approvals",
+              "host": ["{{base_url}}"],
+              "path": ["approvals"]
+            }
+          }
+        },
+        {
+          "name": "Update Approval",
+          "request": {
+            "method": "PUT",
+            "header": [
+              { "key": "Authorization", "value": "Bearer {{auth_token}}" },
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"status\": \"approved\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/approvals/{{approval_id}}",
+              "host": ["{{base_url}}"],
+              "path": ["approvals", "{{approval_id}}"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Webhooks",
+      "item": [
+        {
+          "name": "Twilio Webhook",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "Content-Type", "value": "application/x-www-form-urlencoded" }
+            ],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                { "key": "CallSid", "value": "CA1234567890abcdef" },
+                { "key": "RecordingUrl", "value": "https://api.twilio.com/v1/Accounts/..." },
+                { "key": "TranscriptionText", "value": "Hello this is a test" },
+                { "key": "From", "value": "+1234567890" },
+                { "key": "To", "value": "+0987654321" }
+              ]
+            },
+            "url": {
+              "raw": "{{base_url}}/webhook/twilio",
+              "host": ["{{base_url}}"],
+              "path": ["webhook", "twilio"]
+            }
+          }
+        },
+        {
+          "name": "Voiceflow Webhook",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"session_id\": \"sess_123\",\n  \"messages\": []\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/webhook/voiceflow",
+              "host": ["{{base_url}}"],
+              "path": ["webhook", "voiceflow"]
+            }
+          }
+        },
+        {
+          "name": "WhatsApp Webhook",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"object\": \"whatsapp_business_account\",\n  \"entry\": []\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/webhook/whatsapp",
+              "host": ["{{base_url}}"],
+              "path": ["webhook", "whatsapp"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Billing",
+      "item": [
+        {
+          "name": "Start Trial",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "Authorization", "value": "Bearer {{auth_token}}" },
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"plan_id\": \"pro_monthly\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/billing/trial",
+              "host": ["{{base_url}}"],
+              "path": ["billing", "trial"]
+            }
+          }
+        },
+        {
+          "name": "Razorpay Webhook",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "Content-Type", "value": "application/json" },
+              { "key": "X-Razorpay-Signature", "value": "valid_signature_here" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"event\": \"subscription.charged\",\n  \"payload\": {}\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/billing/webhook",
+              "host": ["{{base_url}}"],
+              "path": ["billing", "webhook"]
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "variable": [
+    {
+      "key": "base_url",
+      "value": "http://localhost:3000",
+      "type": "string"
+    },
+    {
+      "key": "auth_token",
+      "value": "your_jwt_token",
+      "type": "string"
+    },
+    {
+      "key": "lead_id",
+      "value": "uuid_here",
+      "type": "string"
+    },
+    {
+      "key": "approval_id",
+      "value": "uuid_here",
+      "type": "string"
+    }
+  ]
+}

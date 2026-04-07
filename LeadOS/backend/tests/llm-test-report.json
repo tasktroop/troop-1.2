@@ -1,0 +1,286 @@
+[
+  {
+    "template": "lead_followup_whatsapp",
+    "input": {
+      "lead_name": "Rahul",
+      "product": "Premium CRM",
+      "agent_name": "Anita",
+      "company": "LeadOS"
+    },
+    "output": "[MOCK AI RESPONSE] This is a stub response for template lead_followup_whatsapp. Generated because OPENAI_API_KEY was not found.",
+    "model": "gpt-4o",
+    "tokens": 60,
+    "cost_usd": 0.0008,
+    "cached": false,
+    "flagged": false
+  },
+  {
+    "template": "lead_followup_whatsapp",
+    "input": {
+      "lead_name": "Priya",
+      "product": "Marketing Suite",
+      "agent_name": "Karan",
+      "company": "Acme Corp"
+    },
+    "output": "[MOCK AI RESPONSE] This is a stub response for template lead_followup_whatsapp. Generated because OPENAI_API_KEY was not found.",
+    "model": "gpt-4o",
+    "tokens": 60,
+    "cost_usd": 0.0008,
+    "cached": false,
+    "flagged": false
+  },
+  {
+    "template": "lead_followup_whatsapp",
+    "input": {
+      "lead_name": "Amit",
+      "product": "Cloud Hosting",
+      "agent_name": "Neha",
+      "company": "TechSolutions"
+    },
+    "output": "[MOCK AI RESPONSE] This is a stub response for template lead_followup_whatsapp. Generated because OPENAI_API_KEY was not found.",
+    "model": "gpt-4o",
+    "tokens": 60,
+    "cost_usd": 0.0008,
+    "cached": false,
+    "flagged": false
+  },
+  {
+    "template": "lead_followup_whatsapp",
+    "input": {
+      "lead_name": "Sunil",
+      "product": "Business Broadband",
+      "agent_name": "Rohit",
+      "company": "ConnectFast"
+    },
+    "output": "[MOCK AI RESPONSE] This is a stub response for template lead_followup_whatsapp. Generated because OPENAI_API_KEY was not found.",
+    "model": "gpt-4o",
+    "tokens": 60,
+    "cost_usd": 0.0008,
+    "cached": false,
+    "flagged": false
+  },
+  {
+    "template": "social_caption_instagram",
+    "input": {
+      "product": "Wireless Earbuds",
+      "offer": "20% off",
+      "tone": "exciting",
+      "hashtag_count": "5"
+    },
+    "output": "[MOCK AI RESPONSE] This is a stub response for template social_caption_instagram. Generated because OPENAI_API_KEY was not found.",
+    "model": "gpt-4o-mini",
+    "tokens": 60,
+    "cost_usd": 0.0000315,
+    "cached": false,
+    "flagged": false
+  },
+  {
+    "template": "social_caption_instagram",
+    "input": {
+      "product": "Stand Mixer",
+      "offer": "Free delivery",
+      "tone": "warm",
+      "hashtag_count": "8"
+    },
+    "output": "[MOCK AI RESPONSE] This is a stub response for template social_caption_instagram. Generated because OPENAI_API_KEY was not found.",
+    "model": "gpt-4o-mini",
+    "tokens": 60,
+    "cost_usd": 0.0000315,
+    "cached": false,
+    "flagged": false
+  },
+  {
+    "template": "social_caption_instagram",
+    "input": {
+      "product": "Running Shoes",
+      "offer": "Buy 1 Get 1",
+      "tone": "energetic",
+      "hashtag_count": "6"
+    },
+    "output": "[MOCK AI RESPONSE] This is a stub response for template social_caption_instagram. Generated because OPENAI_API_KEY was not found.",
+    "model": "gpt-4o-mini",
+    "tokens": 60,
+    "cost_usd": 0.0000315,
+    "cached": false,
+    "flagged": false
+  },
+  {
+    "template": "social_caption_instagram",
+    "input": {
+      "product": "Leather Wallet",
+      "offer": "10% intro discount",
+      "tone": "luxurious",
+      "hashtag_count": "10"
+    },
+    "output": "[MOCK AI RESPONSE] This is a stub response for template social_caption_instagram. Generated because OPENAI_API_KEY was not found.",
+    "model": "gpt-4o-mini",
+    "tokens": 60,
+    "cost_usd": 0.0000315,
+    "cached": false,
+    "flagged": false
+  },
+  {
+    "template": "social_caption_linkedin",
+    "input": {
+      "topic": "AI in Sales",
+      "company": "LeadOS",
+      "cta": "Book a demo today!"
+    },
+    "output": "[MOCK AI RESPONSE] This is a stub response for template social_caption_linkedin. Generated because OPENAI_API_KEY was not found.",
+    "model": "gpt-4o-mini",
+    "tokens": 60,
+    "cost_usd": 0.0000315,
+    "cached": false,
+    "flagged": false
+  },
+  {
+    "template": "social_caption_linkedin",
+    "input": {
+      "topic": "Remote Work Trends",
+      "company": "WorkAnywhere",
+      "cta": "Read the full report on our blog."
+    },
+    "output": "[MOCK AI RESPONSE] This is a stub response for template social_caption_linkedin. Generated because OPENAI_API_KEY was not found.",
+    "model": "gpt-4o-mini",
+    "tokens": 60,
+    "cost_usd": 0.0000315,
+    "cached": false,
+    "flagged": false
+  },
+  {
+    "template": "social_caption_linkedin",
+    "input": {
+      "topic": "Data Privacy 2026",
+      "company": "SecureVault",
+      "cta": "Contact us for an audit."
+    },
+    "output": "[MOCK AI RESPONSE] This is a stub response for template social_caption_linkedin. Generated because OPENAI_API_KEY was not found.",
+    "model": "gpt-4o-mini",
+    "tokens": 60,
+    "cost_usd": 0.0000315,
+    "cached": false,
+    "flagged": false
+  },
+  {
+    "template": "social_caption_linkedin",
+    "input": {
+      "topic": "B2B Marketing Strategies",
+      "company": "GrowthHackers",
+      "cta": "Subscribe to our newsletter."
+    },
+    "output": "[MOCK AI RESPONSE] This is a stub response for template social_caption_linkedin. Generated because OPENAI_API_KEY was not found.",
+    "model": "gpt-4o-mini",
+    "tokens": 60,
+    "cost_usd": 0.0000315,
+    "cached": false,
+    "flagged": false
+  },
+  {
+    "template": "payment_reminder_whatsapp",
+    "input": {
+      "lead_name": "Deepak",
+      "amount": "$500",
+      "due_date": "tomorrow",
+      "payment_link": "pay.me/123"
+    },
+    "output": "[MOCK AI RESPONSE] We guarantee this is 100% free money.",
+    "model": "gpt-4o-mini",
+    "tokens": 60,
+    "cost_usd": 0.0000315,
+    "cached": false,
+    "flagged": true
+  },
+  {
+    "template": "payment_reminder_whatsapp",
+    "input": {
+      "lead_name": "Sonia",
+      "amount": "$150",
+      "due_date": "March 25",
+      "payment_link": "pay.me/456"
+    },
+    "output": "[MOCK AI RESPONSE] This is a stub response for template payment_reminder_whatsapp. Generated because OPENAI_API_KEY was not found.",
+    "model": "gpt-4o-mini",
+    "tokens": 60,
+    "cost_usd": 0.0000315,
+    "cached": false,
+    "flagged": false
+  },
+  {
+    "template": "payment_reminder_whatsapp",
+    "input": {
+      "lead_name": "Vikas",
+      "amount": "$1000",
+      "due_date": "today",
+      "payment_link": "pay.me/789"
+    },
+    "output": "[MOCK AI RESPONSE] This is a stub response for template payment_reminder_whatsapp. Generated because OPENAI_API_KEY was not found.",
+    "model": "gpt-4o-mini",
+    "tokens": 60,
+    "cost_usd": 0.0000315,
+    "cached": false,
+    "flagged": false
+  },
+  {
+    "template": "payment_reminder_whatsapp",
+    "input": {
+      "lead_name": "Pooja",
+      "amount": "$75",
+      "due_date": "Friday",
+      "payment_link": "pay.me/000"
+    },
+    "output": "[MOCK AI RESPONSE] This is a stub response for template payment_reminder_whatsapp. Generated because OPENAI_API_KEY was not found.",
+    "model": "gpt-4o-mini",
+    "tokens": 60,
+    "cost_usd": 0.0000315,
+    "cached": false,
+    "flagged": false
+  },
+  {
+    "template": "ai_lead_qualification_score",
+    "input": {
+      "lead_data": "{\"title\":\"CEO\",\"companySize\":100,\"budget\":\"10k+\",\"urgency\":\"high\"}"
+    },
+    "output": "[MOCK AI RESPONSE] This is a stub response for template ai_lead_qualification_score. Generated because OPENAI_API_KEY was not found.",
+    "model": "gpt-4o",
+    "tokens": 60,
+    "cost_usd": 0.0008,
+    "cached": false,
+    "flagged": false
+  },
+  {
+    "template": "ai_lead_qualification_score",
+    "input": {
+      "lead_data": "{\"title\":\"Intern\",\"companySize\":5,\"budget\":\"none\",\"urgency\":\"low\"}"
+    },
+    "output": "[MOCK AI RESPONSE] This is a stub response for template ai_lead_qualification_score. Generated because OPENAI_API_KEY was not found.",
+    "model": "gpt-4o",
+    "tokens": 60,
+    "cost_usd": 0.0008,
+    "cached": false,
+    "flagged": false
+  },
+  {
+    "template": "ai_lead_qualification_score",
+    "input": {
+      "lead_data": "{\"title\":\"Manager\",\"companySize\":50,\"budget\":\"1k-5k\",\"urgency\":\"medium\"}"
+    },
+    "output": "[MOCK AI RESPONSE] This is a stub response for template ai_lead_qualification_score. Generated because OPENAI_API_KEY was not found.",
+    "model": "gpt-4o",
+    "tokens": 60,
+    "cost_usd": 0.0008,
+    "cached": false,
+    "flagged": false
+  },
+  {
+    "template": "ai_lead_qualification_score",
+    "input": {
+      "lead_data": "{\"title\":\"Founder\",\"companySize\":10,\"budget\":\"5k+\",\"urgency\":\"high\"}"
+    },
+    "output": "[MOCK AI RESPONSE] This is a stub response for template ai_lead_qualification_score. Generated because OPENAI_API_KEY was not found.",
+    "model": "gpt-4o",
+    "tokens": 60,
+    "cost_usd": 0.0008,
+    "cached": false,
+    "flagged": false
+  }
+]
