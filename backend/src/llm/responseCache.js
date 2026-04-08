@@ -1,5 +1,5 @@
 const crypto = require('crypto');
-const supabase = require('../../config/supabase');
+const supabase = require('../config/supabase');
 
 module.exports = {
   get: async (templateName, variables) => {

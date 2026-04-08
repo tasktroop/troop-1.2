@@ -10,17 +10,17 @@ const rateLimit = require('express-rate-limit');
 const logger = require('./src/utils/logger');
 const { scheduleReports } = require('./src/analytics/weeklyReport');
 
-const authRoutes = require('./routes/auth');
-const leadsRoutes = require('./routes/leads');
-const notesRoutes = require('./routes/notes');
-const approvalsRoutes = require('./routes/approvals');
-const webhooksRoutes = require('./routes/webhooks');
-const billingRoutes = require('./routes/billing');
-const llmRoutes = require('./routes/llm');
-const whatsappRoutes = require('./routes/whatsapp');
-const socialRoutes = require('./routes/social');
+const authRoutes = require('./src/routes/auth');
+const leadsRoutes = require('./src/routes/leads');
+const notesRoutes = require('./src/routes/notes');
+const approvalsRoutes = require('./src/routes/approvals');
+const webhooksRoutes = require('./src/routes/webhooks');
+const billingRoutes = require('./src/routes/billing');
+const llmRoutes = require('./src/routes/llm');
+const whatsappRoutes = require('./src/routes/whatsapp');
+const socialRoutes = require('./src/routes/social');
 const analyticsRoutes = require('./src/routes/analytics');
-const tenantMiddleware = require('./middleware/tenant');
+const tenantMiddleware = require('./src/middleware/tenant');
 const { requireRole } = require('./src/middleware/rbac');
 
 const app = express();

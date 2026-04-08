@@ -1,7 +1,7 @@
 const express = require('express');
 const llmRouter = require('../llm/llmRouter');
 const usageMeter = require('../llm/usageMeter');
-const supabase = require('../../config/supabase');
+const supabase = require('../config/supabase');
 const router = express.Router();
 
 router.post('/generate', async (req, res) => {

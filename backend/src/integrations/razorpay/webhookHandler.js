@@ -1,5 +1,5 @@
 const crypto = require('crypto');
-const supabase = require('../../../config/supabase');
+const supabase = require('../../config/supabase');
 const handleRazorpayWebhook = async (req, res) => {
   // Normally: const signature = req.headers['x-razorpay-signature'];
   // crypto.createHmac verification

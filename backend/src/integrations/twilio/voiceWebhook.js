@@ -1,5 +1,5 @@
 const twilio = require('twilio');
-const supabase = require('../../../config/supabase'); // existing instance
+const supabase = require('../../config/supabase'); // existing instance
 const handleVoiceWebhook = async (req, res) => {
   try {
     const signature = req.headers['x-twilio-signature'] || '';

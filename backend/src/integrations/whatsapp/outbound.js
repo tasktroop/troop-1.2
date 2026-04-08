@@ -1,5 +1,5 @@
 const twilio = require('twilio');
-const supabase = require('../../../config/supabase');
+const supabase = require('../../config/supabase');
 const llmRouter = require('../../llm/llmRouter');
 
 const getTwilioClient = () => {
