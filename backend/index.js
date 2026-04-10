@@ -48,6 +48,7 @@ app.use('/leads', apiLimiter);
 app.use('/approvals', apiLimiter);
 
 // Public routing
+app.get('/', (req, res) => res.send('Backend is live 🚀'));
 app.get('/health', (req, res) => res.json({ status: "ok" }));
 app.use('/auth', authRoutes);
 app.use('/webhook', webhooksRoutes);
