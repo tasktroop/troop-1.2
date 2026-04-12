@@ -1,6 +1,6 @@
 const Razorpay = require('razorpay');
 const PDFDocument = require('pdfkit');
-const supabase = require('../../../config/supabase');
+const supabase = require('../../config/supabase');
 
 const getRazorpay = () => {
   if (!process.env.RAZORPAY_KEY_ID || !process.env.RAZORPAY_KEY_SECRET) return null;

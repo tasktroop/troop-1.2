@@ -1,7 +1,7 @@
 const express = require('express');
 const { generateWeeklyReport } = require('../analytics/weeklyReport');
 const { requireRole } = require('../middleware/rbac');
-const supabase = require('../../config/supabase'); // config
+const supabase = require('../config/supabase'); // config
 const router = express.Router();
 
 router.get('/report', requireRole(['admin']), async (req, res) => {

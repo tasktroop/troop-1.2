@@ -1,4 +1,4 @@
-const supabase = require('../../config/supabase');
+const supabase = require('../config/supabase');
 
 module.exports = {
   loadTemplate: async (name, org_id) => {

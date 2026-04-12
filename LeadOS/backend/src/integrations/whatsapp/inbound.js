@@ -1,5 +1,5 @@
 const twilio = require('twilio');
-const supabase = require('../../../config/supabase');
+const supabase = require('../../config/supabase');
 const llmRouter = require('../../llm/llmRouter');
 
 // We cache a global twilio client instance if env is present

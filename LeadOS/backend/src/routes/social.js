@@ -1,6 +1,6 @@
 const express = require('express');
 const { schedulePost } = require('../integrations/buffer/scheduler');
-const supabase = require('../../config/supabase');
+const supabase = require('../config/supabase');
 const router = express.Router();
 
 router.post('/schedule', async (req, res) => {

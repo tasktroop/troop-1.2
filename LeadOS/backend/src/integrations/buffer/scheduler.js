@@ -1,5 +1,5 @@
 const axios = require('axios');
-const supabase = require('../../../config/supabase');
+const supabase = require('../../config/supabase');
 const schedulePost = async ({ platform, content, scheduledAt, orgId }) => {
   const token = process.env.BUFFER_ACCESS_TOKEN;
   let status = "scheduled";
