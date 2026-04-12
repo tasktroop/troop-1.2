@@ -24,6 +24,7 @@ const tenantMiddleware = require('./src/middleware/tenant');
 const { requireRole } = require('./src/middleware/rbac');
 
 const app = express();
+app.set('trust proxy', 1);
 
 Sentry.init({
   dsn: process.env.SENTRY_DSN || "https://mock@o4511072180371456.ingest.us.sentry.io/4511072193740800",
