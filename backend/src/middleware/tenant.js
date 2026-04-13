@@ -1,12 +1,7 @@
 module.exports = (req, res, next) => {
   console.log("HEADERS RECEIVED:", req.headers);
 
-  // normalize all possible header formats
-  const orgId =
-    req.headers['x-org-id'] ||
-    req.headers['x_org_id'] ||
-    req.headers['xorgid'] ||
-    req.headers['org_id'];
+  const orgId = req.headers['x-org-id'];
 
   if (req.path === '/' || req.path === '/health' || req.path.startsWith('/auth')) {
     return next();
